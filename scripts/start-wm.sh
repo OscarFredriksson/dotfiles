@@ -12,14 +12,22 @@ function restart()
     brew services restart skhd
 }
 
+function stop()
+{
+    brew services stop yabai
+    brew services stop skhd
+}
+
 if [ -z "$1" ]
     then start
 fi
 
-while getopts ":r" opt; do
+while getopts ":rs" opt; do
   case ${opt} in
 
     r ) 
-       restart;;
+        restart;;
+    s )
+        stop;;
    esac
 done
