@@ -60,9 +60,9 @@ cmd + alt - 8 : yabai -m space --focus 8
 cmd + alt - 9 : yabai -m space --focus 9
 cmd + alt - 0 : yabai -m space --focus 10
 
-ctrl + alt - right : yabai -m window --space next; osascript -e 'tell application "System Events" to keystroke (ASCII character 29) using {control down}'
+# ctrl + alt - right : yabai -m window --space next; osascript -e 'tell application "System Events" to keystroke (ASCII character 29) using {control down}'
 
-ctrl + alt - left : yabai -m window --space prev; osascript -e 'tell application "System Events" to keystroke (ASCII character 28) using {control down}'
+# ctrl + alt - left : yabai -m window --space prev; osascript -e 'tell application "System Events" to keystroke (ASCII character 28) using {control down}'
 
 # send window to desktop and follow focus
 shift + cmd - x : yabai -m window --space recent; yabai -m space --focus recent
@@ -151,7 +151,8 @@ alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - d : yabai -m window --toggle zoom-parent
 
 # toggle window fullscreen zoom
-alt - f : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen;\
+          yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # toggle window native fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
